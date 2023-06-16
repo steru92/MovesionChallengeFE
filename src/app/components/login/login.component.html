@@ -1,0 +1,22 @@
+<div class="wrapper">
+  <div class="title">Login</div>
+  <mat-form-field>
+    <mat-label>Username</mat-label>
+    <input type="text" id="username" name="username" [formControl]="username" matInput required>
+    <mat-error *ngIf="username.invalid && username.touched">required!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input type="password" id="password" name="password" [formControl]="password" matInput required>
+    <mat-error *ngIf="password.invalid && password.touched">required!</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Session Expiration</mat-label>
+    <input type="number" min="1" id="expiration" name="expiration" [formControl]="expiration" matInput>
+    <mat-icon matSuffix>av_timer</mat-icon>
+    <mat-hint>session duration in minutes (default: 5 minutes)</mat-hint>
+  </mat-form-field>
+</div>
+<div class="commands">
+  <button mat-raised-button (click)="login()" *ngIf="username.value && password.value">Entra</button>
+</div>

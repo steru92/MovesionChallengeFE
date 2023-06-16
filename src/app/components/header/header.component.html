@@ -1,0 +1,7 @@
+<mat-toolbar id="header" color="primary">
+  <div>{{appName}}</div>
+  <div id="account" *ngIf="isAuthenticated()"> <!--POSSIBLE LACK OF RESOURCES!-->
+    <button mat-button (click)="logout()">Logout</button>
+    <mat-icon>account_circle</mat-icon>
+  </div>
+</mat-toolbar>

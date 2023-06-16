@@ -1,0 +1,40 @@
+@import '../../../variables.scss';
+
+mat-card-content {
+  width: 100%;
+}
+
+mat-card {
+  margin: 0 auto 2em auto;
+  width: 80%;
+  border-radius: 1em/1em;
+  background-color: $color-light;
+}
+
+mat-card-title {
+  margin-bottom: 1em;
+}
+
+mat-card-footer button {
+  margin: 1em .5em 0 .5em;
+}
+
+@media screen and (min-width: 993px) {
+  #list {
+    width: 50%;
+    float: left;
+  }
+  #write {
+    width: 50%;
+    float: right;
+  }
+}
+
+.info {
+  label {
+    font-weight: bold;
+  }
+  * {
+    margin: 0 .5em;
+  }
+}
